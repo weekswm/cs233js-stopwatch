@@ -56,12 +56,14 @@ function stopTimer() {
     // if the timer is running, stop it
     if (isRunning) {
         clearInterval(timer);
+        isRunning = false;
     }
 }
 
 function resetTimer() {
     // stop the timer
     clearInterval(timer);
+    isRunning = false;
     // set the timerTime back to 0
     timerTime = 0;
     // write 00 to the elements on the page for minutes and seconds
