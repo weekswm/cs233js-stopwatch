@@ -53,13 +53,13 @@ class StopWatch
 
     stopTimer() {
         if (this.isRunning) {
-            this.clearInterval(this.timer);
+            this.timer = clearInterval(this.timer);
             this.isRunning = false;
         }
     }
 
     resetTimer() {
-        this.clearInterval(this.timer);
+        this.timer = clearInterval(this.timer);
         this.isRunning = false;
         this.timerTime = 0;
         document.getElementById("minutes").innerHTML = this.pad("0");
