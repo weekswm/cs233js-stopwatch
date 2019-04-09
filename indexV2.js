@@ -51,12 +51,20 @@ class StopWatch
         return number;
     }
 
-    /*stopTimer() {
+    stopTimer() {
         if (this.isRunning) {
             this.clearInterval(this.timer);
             this.isRunning = false;
         }
-    }*/
+    }
+
+    resetTimer() {
+        this.clearInterval(this.timer);
+        this.isRunning = false;
+        this.timerTime = 0;
+        document.getElementById("minutes").innerHTML = this.pad("0");
+        document.getElementById("seconds").innerHTML = this.pad("0");
+    }
 }
 
 // create a variable called stopWatch
